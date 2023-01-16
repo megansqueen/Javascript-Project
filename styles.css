@@ -10,6 +10,11 @@
     --hue-correct: 145;
 }
 
+header {
+    padding-top: 0px;
+    justify-content: center;
+}
+
 body {
     --hue: var(--hue-neutral);
     padding: 0;

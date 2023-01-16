@@ -6,6 +6,10 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++
+    setNextQuestion()
+})
 
 function startGame() {
     startButton.classList.add('hide')
@@ -35,6 +39,7 @@ function showQuestion(question) {
 }
 
 function resetState() {
+    clearStatusClass(document.body)
     nextButton.classList.add('hide')
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild
@@ -49,6 +54,13 @@ function selectAnswer(e) {
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        nextButton.classList.remove('hide')
+    } else {
+        startButton.innerText = 'Restart'
+        startButton.classList.remove('hide')
+    }
+    
 }
 
 function setStatusClass(element, correct) {
@@ -72,5 +84,42 @@ const questions = [
             { text: '4', correct: true },
             { text: '22', correct: false }
     ]
+    },
+    {
+        question: 'what is 2 + 2?',
+        answers: [
+            { text: '4', correct: true },
+            { text: '22', correct: false }
+    ]
+    },
+    {
+        question: 'what is 2 + 2?',
+        answers: [
+            { text: '4', correct: true },
+            { text: '22', correct: false }
+    ]
+    },
+    {
+        question: 'what is 2 + 2?',
+        answers: [
+            { text: '4', correct: true },
+            { text: '22', correct: false }
+    ]
+    },
+    {
+        question: 'what is 2 + 2?',
+        answers: [
+            { text: '4', correct: true },
+            { text: '22', correct: false }
+    ]
     }
 ]
+
+let imageUrl = 'https://cataas.com/api/cats?tags=cute';
+ 
+fetch(imageUrl)
+    .then(response => response.blob())
+    .then(imageBlob => {
+        const imageObjectURL = URL.createObjectURL(imageBlob)
+        console.log(imageObjectURL)
+    })
