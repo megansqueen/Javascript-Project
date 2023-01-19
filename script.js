@@ -112,17 +112,27 @@ function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
         element.classList.add('correct')
-        headerTwo.innerHTML = "Great job - you got it right!"
-        totalRunningScore++
     } else {
         element.classList.add('wrong')
+    }
+    answerAlert()
+}
+
+function answerAlert(element) {
+    if (element === 'correct') {
+        headerTwo.style = "color:red"
         headerTwo.innerHTML = "Oops - try again."
+    } else {
+        headerTwo.style = "color:green"
+        headerTwo.innerHTML = "Great job - you got it right!"
+        totalRunningScore++
     }
 }
 
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong')
+    headerTwo.style = "color:purple"
     headerTwo.innerHTML = "Which Cat Are You?"
 }
 
@@ -130,8 +140,8 @@ const questions = [
     {
         question: 'What is the proper term for a group of kittens?',
         answers: [
-            { text: 'kindle', correct: true },
-            { text: 'Kaboodle', correct: false }
+            { text: 'Kaboodle', correct: false },
+            { text: 'kindle', correct: true }
     ]
     },
     {
