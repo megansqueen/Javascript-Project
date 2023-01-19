@@ -28,6 +28,7 @@ function startGame() {
 
 function setNextQuestion() {
     resetState()
+    fetchCatImage()
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
