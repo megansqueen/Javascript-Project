@@ -112,6 +112,7 @@ function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
         element.classList.add('correct')
+        totalRunningScore++
     } else {
         element.classList.add('wrong')
     }
@@ -125,7 +126,6 @@ function answerAlert(element) {
     } else {
         headerTwo.style = "color:green"
         headerTwo.innerHTML = "Great job - you got it right!"
-        totalRunningScore++
     }
 }
 
