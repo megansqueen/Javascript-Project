@@ -3,6 +3,7 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+const headerTwo = document.getElementById('messaging')
 let totalRunningScore = 0
 let shuffledQuestions, currentQuestionIndex
 
@@ -44,13 +45,6 @@ function showQuestion(question) {
     })
 }
 
-// function seeResults(totalRunningScore) {
-//     if (totalRunningScore >= 2) {
-//         let image = document.getElementById("cat-image")
-//         image.src = 
-//     }
-// }
-
 function resetState() {
     clearStatusClass(document.body)
     nextButton.classList.add('hide')
@@ -69,22 +63,46 @@ function selectAnswer(e) {
     })
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
-    } else {
-        startButton.innerText = 'Results'
+    } else if (totalRunningScore <= 6) {
         questionContainerElement.classList.add('hide')
         questionElement.classList.add('hide')
         answerButtonsElement.classList.add('hide')
-        {
-            startButton.addEventListener('click', seeResults)
-        }
+        headerTwo.innerHTML = "You are TouLouse!"
+        let image = document.getElementById("cat-image")
+        image.src = "https://static.wixstatic.com/media/58d105_d0838e19f66d4c5d88517a3dc2066504~mv2.png/v1/fill/w_754,h_572,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_d0838e19f66d4c5d88517a3dc2066504~mv2.png"
+        console.log(totalRunningScore)
+    } else if (totalRunningScore < 8) {
+        questionContainerElement.classList.add('hide')
+        questionElement.classList.add('hide')
+        answerButtonsElement.classList.add('hide')
+        headerTwo.innerHTML = "You are Berlioz!"
+        let image = document.getElementById("cat-image")
+        image.src = "https://static.wixstatic.com/media/58d105_c869a439da5c4196be9082da0b23b526~mv2.png/v1/fill/w_696,h_768,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_c869a439da5c4196be9082da0b23b526~mv2.png"
+        console.log(totalRunningScore)
+    } else if (totalRunningScore < 10) {
+        questionContainerElement.classList.add('hide')
+        questionElement.classList.add('hide')
+        answerButtonsElement.classList.add('hide')
+        headerTwo.innerHTML = "You are Marie!"
+        let image = document.getElementById("cat-image")
+        image.src = "https://static.wixstatic.com/media/58d105_2e959917d8ae4f0aa50d49b09be1122d~mv2.png/v1/fill/w_554,h_768,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_2e959917d8ae4f0aa50d49b09be1122d~mv2.png"
+        console.log(totalRunningScore)
+    } else {
+        questionContainerElement.classList.add('hide')
+        questionElement.classList.add('hide')
+        answerButtonsElement.classList.add('hide')
+        headerTwo.innerHTML = "You are Duchess!"
+        let image = document.getElementById("cat-image")
+        image.src = "https://static.wixstatic.com/media/58d105_afcabc5053b4499d9b0802469761adcd~mv2.png/v1/fill/w_662,h_768,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_afcabc5053b4499d9b0802469761adcd~mv2.png"
+        console.log(totalRunningScore)
     }
-    
 }
 
 function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
         element.classList.add('correct')
+        totalRunningScore++
     } else {
         element.classList.add('wrong')
     }
@@ -93,13 +111,6 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong')
-}
-
-function trackScore(totalRunningScore) {
-    if(questions.answers.correct === true) {
-        totalRunningScore++
-        console.log(totalRunningScore)
-    }
 }
 
 const questions = [
@@ -127,8 +138,8 @@ const questions = [
     {
         question: 'What is it called when a cat kneads the ground?',
         answers: [
-            { text: 'kneading', correct: true },
-            { text: 'snurgling', correct: false }
+            { text: 'kneading', correct: false },
+            { text: 'snurgling', correct: true }
     ]
     },
     {
