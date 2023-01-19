@@ -3,7 +3,13 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+let totalRunningScore = 0
 let shuffledQuestions, currentQuestionIndex
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    fetchCatImage()
+})
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -38,6 +44,13 @@ function showQuestion(question) {
     })
 }
 
+// function seeResults(totalRunningScore) {
+//     if (totalRunningScore >= 2) {
+//         let image = document.getElementById("cat-image")
+//         image.src = 
+//     }
+// }
+
 function resetState() {
     clearStatusClass(document.body)
     nextButton.classList.add('hide')
@@ -57,8 +70,13 @@ function selectAnswer(e) {
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
     } else {
-        startButton.innerText = 'Restart'
-        startButton.classList.remove('hide')
+        startButton.innerText = 'Results'
+        questionContainerElement.classList.add('hide')
+        questionElement.classList.add('hide')
+        answerButtonsElement.classList.add('hide')
+        {
+            startButton.addEventListener('click', seeResults)
+        }
     }
     
 }
@@ -77,49 +95,54 @@ function clearStatusClass(element) {
     element.classList.remove('wrong')
 }
 
+function trackScore(totalRunningScore) {
+    if(questions.answers.correct === true) {
+        totalRunningScore++
+        console.log(totalRunningScore)
+    }
+}
+
 const questions = [
     {
-        question: 'what is 2 + 2?',
+        question: 'What is the proper term for a group of kittens?',
         answers: [
-            { text: '4', correct: true },
-            { text: '22', correct: false }
+            { text: 'kindle', correct: true },
+            { text: 'Kaboodle', correct: false }
     ]
     },
     {
-        question: 'what is 2 + 2?',
+        question: 'All cats are born with what color eyes?',
         answers: [
-            { text: '4', correct: true },
-            { text: '22', correct: false }
+            { text: 'black', correct: false },
+            { text: 'blue', correct: true }
     ]
     },
     {
-        question: 'what is 2 + 2?',
+        question: "What percentage of a cat's bones are in its tail?",
         answers: [
-            { text: '4', correct: true },
-            { text: '22', correct: false }
+            { text: '20%', correct: false },
+            { text: '10%', correct: true }
     ]
     },
     {
-        question: 'what is 2 + 2?',
+        question: 'What is it called when a cat kneads the ground?',
         answers: [
-            { text: '4', correct: true },
-            { text: '22', correct: false }
+            { text: 'kneading', correct: true },
+            { text: 'snurgling', correct: false }
     ]
     },
     {
-        question: 'what is 2 + 2?',
+        question: 'How many different sounds can a cat make?',
         answers: [
-            { text: '4', correct: true },
-            { text: '22', correct: false }
+            { text: '22', correct: false },
+            { text: '100', correct: true }
     ]
     }
 ]
 
-let imageUrl = 'https://cataas.com/api/cats?tags=cute';
- 
-fetch(imageUrl)
-    .then(response => response.blob())
-    .then(imageBlob => {
-        const imageObjectURL = URL.createObjectURL(imageBlob)
-        console.log(imageObjectURL)
-    })
+function fetchCatImage() {
+    let image = document.getElementById("cat-image")
+    fetch('https://api.thecatapi.com/v1/images/search')
+    .then(res => res.json())
+    .then(json => image.src = json[0].url)
+}

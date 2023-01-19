@@ -1,7 +1,7 @@
 *, *::before, *::after {
     box-sizing: border-box;
     font-family: Waltograph;
-    font-size: xx-large;
+    font-size: 50px;
 }
 
 :root {
@@ -10,9 +10,10 @@
     --hue-correct: 145;
 }
 
-header {
-    padding-top: 0px;
+.header {
+    padding-top: 60px;
     justify-content: center;
+    text-align: center;
 }
 
 body {
@@ -53,16 +54,18 @@ body.wrong {
 
 .btn {
     --hue: var(--hue-neutral);
-    border: 1px solid hsl(var(--hue), 100%, 30%);
+    border: 10px solid hsl(var(--hue), 100%, 30%);
     background-color: hsl(var(--hue), 100%, 50%);
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 5px 10px;
     color: white;
     outline: none;
+    text-align: center;
+    vertical-align: center;
 }
 
 .btn:hover {
-    border-color: black;
+    border-color: rgb(47, 11, 192);
 }
 
 .btn.correct {
@@ -77,7 +80,7 @@ body.wrong {
 .start-btn, .next-btn {
     font-size: 1.5rem;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 20px 20px;
 }
 
 .controls {
@@ -89,3 +92,26 @@ body.wrong {
 .hide {
     display: none;
 }
+
+#cat-image {
+    max-height: 500px;
+    border: 20px solid black;
+  }
+
+  .imageDetails {
+    background-color: black;
+    margin-top: 50px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    width: fit-content;
+  }
+
+  .imageDetails a {
+    color: #FFF;
+  }
+
+  .imageDetails a:hover {
+    color: yellow;
+  }
