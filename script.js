@@ -112,15 +112,18 @@ function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
         element.classList.add('correct')
+        headerTwo.innerHTML = "Great job - you got it right!"
         totalRunningScore++
     } else {
         element.classList.add('wrong')
+        headerTwo.innerHTML = "Oops - try again."
     }
 }
 
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong')
+    headerTwo.innerHTML = "Which Cat Are You?"
 }
 
 const questions = [
