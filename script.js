@@ -13,10 +13,21 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 startButton.addEventListener('click', startGame)
+
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
 })
+
+function searchKeyPress(e) {
+    e = e || window.event;
+    if (e.keyCode == 13)
+    {
+        document.getElementById('start-btn').click();
+        return false;
+    }
+    return true;
+}
 
 function startGame() {
     startButton.classList.add('hide')
