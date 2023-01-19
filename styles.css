@@ -14,7 +14,9 @@
     padding-top: 60px;
     justify-content: center;
     text-align: center;
+    text-decoration-color: blue;
 }
+
 
 body {
     --hue: var(--hue-neutral);
