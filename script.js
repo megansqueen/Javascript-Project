@@ -63,7 +63,8 @@ function selectAnswer(e) {
     })
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
-    } else if (totalRunningScore <= 6) {
+        console.log(totalRunningScore)
+    } else if (totalRunningScore < 11) {
         questionContainerElement.classList.add('hide')
         questionElement.classList.add('hide')
         answerButtonsElement.classList.add('hide')
@@ -71,7 +72,7 @@ function selectAnswer(e) {
         let image = document.getElementById("cat-image")
         image.src = "https://static.wixstatic.com/media/58d105_d0838e19f66d4c5d88517a3dc2066504~mv2.png/v1/fill/w_754,h_572,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_d0838e19f66d4c5d88517a3dc2066504~mv2.png"
         console.log(totalRunningScore)
-    } else if (totalRunningScore < 8) {
+    } else if (totalRunningScore < 15) {
         questionContainerElement.classList.add('hide')
         questionElement.classList.add('hide')
         answerButtonsElement.classList.add('hide')
@@ -79,7 +80,15 @@ function selectAnswer(e) {
         let image = document.getElementById("cat-image")
         image.src = "https://static.wixstatic.com/media/58d105_c869a439da5c4196be9082da0b23b526~mv2.png/v1/fill/w_696,h_768,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_c869a439da5c4196be9082da0b23b526~mv2.png"
         console.log(totalRunningScore)
-    } else if (totalRunningScore < 10) {
+    } else if (totalRunningScore < 17) {
+        questionContainerElement.classList.add('hide')
+        questionElement.classList.add('hide')
+        answerButtonsElement.classList.add('hide')
+        headerTwo.innerHTML = "You are Thomas O'Malley!"
+        let image = document.getElementById("cat-image")
+        image.src = "https://static.wixstatic.com/media/58d105_6b8553dd31454d169815baf422fdf005~mv2.png/v1/fill/w_728,h_768,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_6b8553dd31454d169815baf422fdf005~mv2.png"
+        console.log(totalRunningScore)
+    } else if (totalRunningScore < 18) {
         questionContainerElement.classList.add('hide')
         questionElement.classList.add('hide')
         answerButtonsElement.classList.add('hide')
@@ -148,6 +157,34 @@ const questions = [
             { text: '22', correct: false },
             { text: '100', correct: true }
     ]
+    },
+    {
+        question: 'What year was the first major cat show held in the United States?',
+        answers: [
+            { text: '1921', correct: false},
+            { text: '1895', correct: true}
+        ]
+    },
+    {
+        question: 'What is the normal body temperature for a cat?',
+        answers: [
+            { text: '102 degrees fahrenheit', correct: true},
+            { text: '98 degrees fahrenheit', correct: false}
+        ]
+    },
+    {
+        question: 'What breed of cat has a reputation for being cross-eyed?',
+        answers: [
+            { text: 'Egyptian Mau', correct: false},
+            { text: 'Siamese', correct: true}
+        ]
+    },
+    {
+        question: 'What breed of cat has no tail?',
+        answers: [
+            { text: 'Snowshoe', correct: false},
+            { text: 'Manx', correct: true}
+        ]
     }
 ]
 
