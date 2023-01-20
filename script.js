@@ -127,18 +127,19 @@ function setStatusClass(element, correct) {
     } else {
         element.classList.add('wrong')
     }
-    answerAlert()
+    // answerAlert(element)
 }
 
-function answerAlert(element) {
-    if (element === 'correct') {
-        headerTwo.style = "color:red"
-        headerTwo.innerHTML = "Oops - try again."
-    } else {
-        headerTwo.style = "color:green"
-        headerTwo.innerHTML = "Great job - you got it right!"
-    }
-}
+// function answerAlert(element) {
+//     console.log(element)
+//     if (element.classList === 'correct') {
+//         headerTwo.style = "color:green"
+//         headerTwo.innerHTML = "Great job - you got it right!"
+//     } else {
+//         headerTwo.style = "color:red"
+//         headerTwo.innerHTML = "Oops - try again."
+//     }
+// }
 
 function clearStatusClass(element) {
     element.classList.remove('correct');
