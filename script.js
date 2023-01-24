@@ -60,6 +60,7 @@ function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
     setStatusClass(document.body, correct)
+    answerAlert(e)
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
         console.log(totalRunningScore)
@@ -119,20 +120,23 @@ function setStatusClass(element, correct) {
     answerAlert(element)
 }
 
-function answerAlert(element) {
-    console.log(element)
-    if (element.classList === 'correct') {
-        headerTwo.style = "color:green"
-        headerTwo.innerHTML = "Great job - you got it right!"
-    } else {
+function answerAlert(e) {
+    console.log(e.classList)
+    if ( e.classList == 'wrong') {
+        answerButtonsElement.classList = 'btn wrong'
         headerTwo.style = "color:red"
         headerTwo.innerHTML = "Oops - try again."
+    } else if (e.classList == 'correct') {
+        answerButtonsElement.classList = 'btn correct'
+        headerTwo.style = "color:green"
+        headerTwo.innerHTML = "Great job - you got it right!"
     }
 }
 
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong')
+    answerButtonsElement.classList = 'btn'
     headerTwo.style = "color:purple"
     headerTwo.innerHTML = "Which Cat Are You?"
 }
