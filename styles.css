@@ -21,7 +21,6 @@
     position: fixed; top: 0;
 }
 
-
 body {
     --hue: var(--hue-neutral);
     padding: 0;
@@ -47,9 +46,17 @@ body.wrong {
     max-width: 60%;
     background-color: white;
     border-radius: 5px;
-    padding: 1000px;
+    padding: 640px;
     box-shadow: 0 0 10px 2px;
-    position: fixed; 
+}
+
+#question-container {
+    position: absolute; bottom: 0;
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
 }
 
 .btn-grid {
@@ -101,8 +108,9 @@ body.wrong {
 }
 
 #cat-image {
-    max-height: 500px;
+    max-height: 300px;
     border: 20px solid black;
+    align-items: center;
   }
 
   .imageDetails {
