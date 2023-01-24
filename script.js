@@ -64,7 +64,7 @@ function selectAnswer(e) {
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
         console.log(totalRunningScore)
-    } else if (totalRunningScore < 11) {
+    } else if (totalRunningScore < 4) {
         questionContainerElement.classList.add('hide')
         questionElement.classList.add('hide')
         answerButtonsElement.classList.add('hide')
@@ -72,7 +72,7 @@ function selectAnswer(e) {
         let image = document.getElementById("cat-image")
         image.src = "https://static.wixstatic.com/media/58d105_d0838e19f66d4c5d88517a3dc2066504~mv2.png/v1/fill/w_754,h_572,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_d0838e19f66d4c5d88517a3dc2066504~mv2.png"
         console.log(totalRunningScore)
-    } else if (totalRunningScore < 15) {
+    } else if (totalRunningScore < 6) {
         questionContainerElement.classList.add('hide')
         questionElement.classList.add('hide')
         answerButtonsElement.classList.add('hide')
@@ -80,7 +80,7 @@ function selectAnswer(e) {
         let image = document.getElementById("cat-image")
         image.src = "https://static.wixstatic.com/media/58d105_c869a439da5c4196be9082da0b23b526~mv2.png/v1/fill/w_696,h_768,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_c869a439da5c4196be9082da0b23b526~mv2.png"
         console.log(totalRunningScore)
-    } else if (totalRunningScore < 17) {
+    } else if (totalRunningScore < 8) {
         questionContainerElement.classList.add('hide')
         questionElement.classList.add('hide')
         answerButtonsElement.classList.add('hide')
@@ -88,7 +88,7 @@ function selectAnswer(e) {
         let image = document.getElementById("cat-image")
         image.src = "https://static.wixstatic.com/media/58d105_6b8553dd31454d169815baf422fdf005~mv2.png/v1/fill/w_728,h_768,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_6b8553dd31454d169815baf422fdf005~mv2.png"
         console.log(totalRunningScore)
-    } else if (totalRunningScore < 18) {
+    } else if (totalRunningScore < 9) {
         questionContainerElement.classList.add('hide')
         questionElement.classList.add('hide')
         answerButtonsElement.classList.add('hide')
