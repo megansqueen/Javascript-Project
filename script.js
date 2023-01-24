@@ -6,7 +6,7 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 const headerTwo = document.getElementById('messaging')
 let totalRunningScore = 0
 let shuffledQuestions, currentQuestionIndex
-
+let userAnswers = []
 
 document.addEventListener("DOMContentLoaded", () => {
     fetchCatImage()
@@ -18,16 +18,6 @@ nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
 })
-
-function searchKeyPress(e) {
-    e = e || window.event;
-    if (e.keyCode == 13)
-    {
-        document.getElementById('start-btn').click();
-        return false;
-    }
-    return true;
-}
 
 function startGame() {
     startButton.classList.add('hide')
@@ -70,9 +60,6 @@ function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
     setStatusClass(document.body, correct)
-    Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
-    })
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
         console.log(totalRunningScore)
@@ -124,22 +111,24 @@ function setStatusClass(element, correct) {
     if (correct) {
         element.classList.add('correct')
         totalRunningScore++
+        console.log(totalRunningScore)
     } else {
         element.classList.add('wrong')
+        console.log("check here on the else", totalRunningScore)
     }
-    // answerAlert(element)
+    answerAlert(element)
 }
 
-// function answerAlert(element) {
-//     console.log(element)
-//     if (element.classList === 'correct') {
-//         headerTwo.style = "color:green"
-//         headerTwo.innerHTML = "Great job - you got it right!"
-//     } else {
-//         headerTwo.style = "color:red"
-//         headerTwo.innerHTML = "Oops - try again."
-//     }
-// }
+function answerAlert(element) {
+    console.log(element)
+    if (element.classList === 'correct') {
+        headerTwo.style = "color:green"
+        headerTwo.innerHTML = "Great job - you got it right!"
+    } else {
+        headerTwo.style = "color:red"
+        headerTwo.innerHTML = "Oops - try again."
+    }
+}
 
 function clearStatusClass(element) {
     element.classList.remove('correct');
