@@ -68,7 +68,7 @@ function selectAnswer(e) {
         questionContainerElement.classList.add('hide')
         questionElement.classList.add('hide')
         answerButtonsElement.classList.add('hide')
-        headerTwo.innerHTML = "You are TouLouse!"
+        headerTwo.innerHTML = "Your score was less than 4 out of 9,\n you know as much about cats as TouLouse!"
         let image = document.getElementById("cat-image")
         image.src = "https://static.wixstatic.com/media/58d105_d0838e19f66d4c5d88517a3dc2066504~mv2.png/v1/fill/w_754,h_572,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_d0838e19f66d4c5d88517a3dc2066504~mv2.png"
         console.log(totalRunningScore)
@@ -76,7 +76,7 @@ function selectAnswer(e) {
         questionContainerElement.classList.add('hide')
         questionElement.classList.add('hide')
         answerButtonsElement.classList.add('hide')
-        headerTwo.innerHTML = "You are Berlioz!"
+        headerTwo.innerHTML = "Your score was less than 6 out of 9,\n you know as much about cats as Berlioz!"
         let image = document.getElementById("cat-image")
         image.src = "https://static.wixstatic.com/media/58d105_c869a439da5c4196be9082da0b23b526~mv2.png/v1/fill/w_696,h_768,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_c869a439da5c4196be9082da0b23b526~mv2.png"
         console.log(totalRunningScore)
@@ -84,7 +84,7 @@ function selectAnswer(e) {
         questionContainerElement.classList.add('hide')
         questionElement.classList.add('hide')
         answerButtonsElement.classList.add('hide')
-        headerTwo.innerHTML = "You are Thomas O'Malley!"
+        headerTwo.innerHTML = "You scores less than 8,\n you know as much about cats as Thomas O'Malley!"
         let image = document.getElementById("cat-image")
         image.src = "https://static.wixstatic.com/media/58d105_6b8553dd31454d169815baf422fdf005~mv2.png/v1/fill/w_728,h_768,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_6b8553dd31454d169815baf422fdf005~mv2.png"
         console.log(totalRunningScore)
@@ -92,7 +92,7 @@ function selectAnswer(e) {
         questionContainerElement.classList.add('hide')
         questionElement.classList.add('hide')
         answerButtonsElement.classList.add('hide')
-        headerTwo.innerHTML = "You are Marie!"
+        headerTwo.innerHTML = "Great job! Your score was 8 out of 9,\n you know as much about cats as Marie!"
         let image = document.getElementById("cat-image")
         image.src = "https://static.wixstatic.com/media/58d105_2e959917d8ae4f0aa50d49b09be1122d~mv2.png/v1/fill/w_554,h_768,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_2e959917d8ae4f0aa50d49b09be1122d~mv2.png"
         console.log(totalRunningScore)
@@ -100,7 +100,7 @@ function selectAnswer(e) {
         questionContainerElement.classList.add('hide')
         questionElement.classList.add('hide')
         answerButtonsElement.classList.add('hide')
-        headerTwo.innerHTML = "You are Duchess!"
+        headerTwo.innerHTML = "You know everything about cats!\nJust as much as Duchess!"
         let image = document.getElementById("cat-image")
         image.src = "https://static.wixstatic.com/media/58d105_afcabc5053b4499d9b0802469761adcd~mv2.png/v1/fill/w_662,h_768,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_afcabc5053b4499d9b0802469761adcd~mv2.png"
         console.log(totalRunningScore)
