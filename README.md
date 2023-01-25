@@ -6,4 +6,4 @@ This app is purely intended to add a little fun while also providing an educatio
 When you launch this application you will see that the CSS style presents a bright pink background with Disney traditional font. The quiz begins once the user hits the "start" botton like so:
 
 ![]
-(https://github.com/megansqueen/Javascript-Project/blob/main/Screen%20Recording%202023-01-25%20at%2010.54.05%20AM.mov)
+(https://github.com/megansqueen/Javascript-Project/blob/main/Screen%20Recording%202023-01-25%20at%203.33.40%20PM.mov)
