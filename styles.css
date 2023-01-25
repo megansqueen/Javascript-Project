@@ -108,7 +108,7 @@ body.wrong {
 }
 
 #cat-image {
-    max-height: 300px;
+    max-height: 200px;
     border: 20px solid black;
     align-items: center;
   }
