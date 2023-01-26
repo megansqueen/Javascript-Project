@@ -6,3 +6,5 @@ This app is purely intended to add a little fun while also providing an educatio
 When you launch this application you will see that the CSS style presents a bright pink background with Disney traditional font. The quiz begins once the user hits the "start" botton like so:
 
 ![](https://github.com/megansqueen/Javascript-Project/blob/main/ezgif.com-gif-maker.gif)
+
+<img src="https://imgur.com/a/D24D2L9">
