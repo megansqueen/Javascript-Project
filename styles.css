@@ -113,20 +113,6 @@ body.wrong {
     align-items: center;
   }
 
-  .imageDetails {
-    background-color: black;
-    margin-top: 50px;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    width: fit-content;
-  }
-
-  .imageDetails a {
-    color: #FFF;
-  }
-
-  .imageDetails a:hover {
-    color: yellow;
-  }
+ #cat-image:hover {
+    border-color: darkorchid
+ }
