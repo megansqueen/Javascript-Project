@@ -84,7 +84,7 @@ function selectAnswer(e) {
         questionContainerElement.classList.add('hide')
         questionElement.classList.add('hide')
         answerButtonsElement.classList.add('hide')
-        headerTwo.innerHTML = "You scores less than 8,\n you know as much about cats as Thomas O'Malley!"
+        headerTwo.innerHTML = "You scored less than 8,\n you know as much about cats as Thomas O'Malley!"
         let image = document.getElementById("cat-image")
         image.src = "https://static.wixstatic.com/media/58d105_6b8553dd31454d169815baf422fdf005~mv2.png/v1/fill/w_728,h_768,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_6b8553dd31454d169815baf422fdf005~mv2.png"
         console.log(totalRunningScore)
