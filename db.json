@@ -1,1 +1,60 @@
-  
+{
+"catFacts": [
+    {
+    "id": 1,
+    "catFact": "What is the proper term for a group of kittens?",
+    "possibleAnswers": ["Kaboodle", "Kindle"],
+    "correctAnswer": ["Kindle"]
+    },
+    {
+    "id": 2,
+    "catFact": "All cats are born with what color eyes?",
+    "possibleAnswers": ["Black", "Blue"],
+    "correctAnswer": ["Blue"]
+    },
+    {
+    "id": 3,
+    "catFact": "What percentage of a cat's bones are in its tail?",
+    "possibleAnswers": ["20%", "10%"],
+    "correctAnswer": ["10%"]
+    },
+    {
+    "id": 4,
+    "catFact": "What is it called when a cat kneads the ground?",
+    "possibleAnswers": ["Kneading", "Snurgling"],
+    "correctAnswer": ["Snurgling"]
+    },
+    {
+    "id": 5,
+    "catFact": "How many different sounds can a cat make?",
+    "possibleAnswers": ["22", "100"],
+    "correctAnswer": ["100"]
+    },
+    {
+    "id": 6,
+    "catFact": "What year was the first major cat show held in the United States?",
+    "possibleAnswers": ["1921", "1895"],
+    "correctAnswer": ["1895"]
+    },
+    {
+    "id": 7,
+    "catFact": "What is the normal body temperature for a cat?",
+    "possibleAnswers": ["102", "98"],
+    "correctAnswer": ["102"]
+    },
+    {
+    "id": 8,
+    "catFact": "What breed of cat has a reputation for being cross-eyed?",
+    "possibleAnswers": ["Egyptian Mau", "Siamese"],
+    "correctAnswer": ["Siamese"]
+    },
+    {
+    "id": 9,
+    "catFact": "What breed of cat has no tail?",
+    "possibleAnswers": ["Snowshoe", "Manx"],
+    "correctAnswer": ["Manx"]
+    }
+]
+}
+
+
