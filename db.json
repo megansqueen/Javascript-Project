@@ -9,7 +9,7 @@
     {
     "id": 2,
     "catFact": "All cats are born with what color eyes?",
-    "possibleAnswers": ["Black", "Blue"],
+    "possibleAnswers": ["Blue", "Black"],
     "correctAnswer": ["Blue"]
     },
     {
@@ -27,7 +27,7 @@
     {
     "id": 5,
     "catFact": "How many different sounds can a cat make?",
-    "possibleAnswers": ["22", "100"],
+    "possibleAnswers": ["100", "22"],
     "correctAnswer": ["100"]
     },
     {

@@ -32,14 +32,6 @@ let right, wrong
 startButton.addEventListener("mouseover", mouseOverFunction, false);
 startButton.addEventListener("mouseout", mouseOutFunction, false);
 
-function mouseOverFunction() {
-    startButton.setAttribute("style", "background-color:purple;")
-}
-
-function mouseOutFunction() {
-    startButton.setAttribute("style", "background-color:hsl(var(--hue), 100%, 50%);")
-}
-
 document.addEventListener("DOMContentLoaded", () => {
     fetchCatImage()
 })
@@ -51,10 +43,39 @@ nextButton.addEventListener('click', () => {
 })
 
 //functions
+function mouseOverFunction() {
+    startButton.setAttribute("style", "background-color:purple;")
+}
+
+function mouseOutFunction() {
+    startButton.setAttribute("style", "background-color:hsl(var(--hue), 100%, 50%);")
+}
+
 function startGame() {
     startButton.classList.add('hide')
     questionContainerElement.classList.remove('hide')
     setNextQuestion()
+}
+
+function setNextQuestion() {
+    resetState()
+    fetchCatImage()
+    fetchQuestion()
+}
+
+function resetState() {
+    clearStatusClass(document.body)
+    nextButton.classList.add('hide')
+    while (answerButtonsElement.firstChild) {
+        answerButtonsElement.removeChild
+        (answerButtonsElement.firstChild)
+    }
+}
+
+function clearStatusClass() {
+    answerButtonsElement.classList = 'btn'
+    headerTwo.style = "color:purple"
+    headerTwo.innerHTML = "Which Cat Are You?"
 }
 
 function pullQuestions(questionObject) {
@@ -73,10 +94,8 @@ function createButtons(answer, correctAnswer) {
     button.innerText = answer
     button.classList.add('btn')
         if (answer === correctAnswer) {
-            button.classList.add('.correct')
             right = button.innerText
         } else if (answer !== correctAnswer) {
-            button.classList.add('.wrong')
             wrong = button.innerText
         } 
         answerButtonsElement.appendChild(button)
@@ -107,29 +126,6 @@ function checkIfComplete() {
     }
 }
 
-function setNextQuestion() {
-    resetState()
-    fetchCatImage()
-    fetchQuestion()
-}
-
-function resetState() {
-    clearStatusClass(document.body)
-    nextButton.classList.add('hide')
-    while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild
-        (answerButtonsElement.firstChild)
-    }
-}
-
-function clearStatusClass(element) {
-    element.classList.remove('correct')
-    element.classList.remove('wrong')
-    answerButtonsElement.classList = 'btn'
-    headerTwo.style = "color:purple"
-    headerTwo.innerHTML = "Which Cat Are You?"
-}
-
 function finalResults(totalRunningScore) {
     questionContainerElement.classList.add('hide')
     questionElement.classList.add('hide')
@@ -144,11 +140,11 @@ function finalResults(totalRunningScore) {
         image.src = "https://static.wixstatic.com/media/58d105_c869a439da5c4196be9082da0b23b526~mv2.png/v1/fill/w_696,h_768,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_c869a439da5c4196be9082da0b23b526~mv2.png"
         console.log(totalRunningScore)
     } else if (totalRunningScore < 6) {
-        headerTwo.innerHTML = "You scored less than 8,\n you know as much about cats as Thomas O'Malley!"
+        headerTwo.innerHTML = "You scored less than 6,\n you know as much about cats as Thomas O'Malley!"
         image.src = "https://static.wixstatic.com/media/58d105_6b8553dd31454d169815baf422fdf005~mv2.png/v1/fill/w_728,h_768,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_6b8553dd31454d169815baf422fdf005~mv2.png"
         console.log(totalRunningScore)
     } else if (totalRunningScore < 8) {
-        headerTwo.innerHTML = "Great job! Your score was 8 out of 9,\n you know as much about cats as Marie!"
+        headerTwo.innerHTML = "Great job! Your scored 6 or more,\n you know as much about cats as Marie!"
         image.src = "https://static.wixstatic.com/media/58d105_2e959917d8ae4f0aa50d49b09be1122d~mv2.png/v1/fill/w_554,h_768,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/58d105_2e959917d8ae4f0aa50d49b09be1122d~mv2.png"
         console.log(totalRunningScore)
     } else {
